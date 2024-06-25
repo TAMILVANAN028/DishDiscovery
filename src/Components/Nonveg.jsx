@@ -12,7 +12,7 @@ function Nonveg() {
     }, []);
   
     const getNonveg = async () => {
-       const check =localStorage.getItem("nonveg")
+       const check =localStorage.getItem("Nonveg")
        if(check)
      { 
           setNonveg(JSON.parse(check));
