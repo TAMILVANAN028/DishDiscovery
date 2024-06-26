@@ -12,21 +12,21 @@ function Nonveg() {
     }, []);
   
     const getNonveg = async () => {
-       const check =localStorage.getItem("Nonveg")
-       if(check)
-     { 
-          setNonveg(JSON.parse(check));
-        }else
-        {
+    //    const check =localStorage.getItem("Nonveg")
+    //    if(check)
+    //  { 
+    //       setNonveg(JSON.parse(check));
+    //     }else
+    //     {
           const api = await fetch(
             `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=meat`
           );
           const data = await api.json();
-          localStorage.setItem("Nonveg",JSON.stringify(data.recipes));
+          // localStorage.setItem("Nonveg",JSON.stringify(data.recipes));
           setNonveg(data.recipes);
           console.log(data.recipes);
   
-       }
+      //  }
       
     };
   
